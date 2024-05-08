@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { createRouterGuards } from './guards'
 
 const constantRoute = [
   {
@@ -8,25 +9,6 @@ const constantRoute = [
       name: '登录'
     },
     component: () => import('@/views/login/index.vue')
-  },
-  {
-    path: '/test/layout',
-    name: 'layout',
-    meta: {
-      name: '测试layout'
-    },
-    component: () => import('@/layout/index.vue'),
-    redirect: '/test/layout/1',
-    children: [
-      {
-        path: '/test/layout/1',
-        name: 'layout1',
-        meta: {
-          name: '测试'
-        },
-        component: () => import('@/views/home/index.vue')
-      }
-    ]
   },
   {
     path: '/',
@@ -51,9 +33,12 @@ const customRouterOptions = {
     }
   }
 }
+
 const router = createRouter(customRouterOptions)
 export function setupRouter(app) {
   app.use(router)
+  // 路由守卫
+  createRouterGuards(router)
 }
 
 export default router
