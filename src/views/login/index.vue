@@ -1,6 +1,12 @@
 <template>
-  <div>登录页</div>
+  <div @click="toHomePage">前往主页</div>
 </template>
 
-<script setup></script>
+<script setup>
+  import { useRouter } from 'vue-router'
+  const router = useRouter()
+  function toHomePage() {
+    router.push('/platform/home')
+  }
+</script>
 <style scoped lang="scss"></style>
