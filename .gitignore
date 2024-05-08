@@ -7,8 +7,6 @@ yarn-debug.log*
 yarn-error.log*
 **/*.log
 dts/
-tests/**/coverage/
-tests/e2e/reports
 selenium-debug.log
 .eslintrc-auto-import.json
 # Editor directories and files

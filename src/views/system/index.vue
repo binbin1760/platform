@@ -1,5 +1,5 @@
 <template>
-  <div>登录页</div>
+  <div>系统测试</div>
 </template>
 
 <script setup></script>
