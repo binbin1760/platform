@@ -4,9 +4,7 @@
       <Header />
     </el-header>
     <el-container class="contain">
-      <el-aside width="200px">
-        <side-menu />
-      </el-aside>
+      <side-menu />
       <el-main class="main">
         <router-view></router-view>
       </el-main>
