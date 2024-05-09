@@ -28,7 +28,7 @@
 <style scoped lang="scss">
   .menu {
     background: #ffffff;
-    height: 100vh;
+    height: 100%;
   }
   .el-menu {
     border-right: none;

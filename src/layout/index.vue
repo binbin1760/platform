@@ -26,8 +26,10 @@
     display: flex;
   }
   .main {
-    padding-top: 12px;
-    padding-left: 12px;
+    padding: 12px 0 0 12px;
     background: #f2f2f2;
+  }
+  .el-main {
+    --el-main-padding: 12px;
   }
 </style>

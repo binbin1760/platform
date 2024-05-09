@@ -1,6 +1,8 @@
 <template>
-  <div>系统测试</div>
+  <FlowMap />
 </template>
 
-<script setup></script>
+<script setup>
+  import { FlowMap } from '@/components'
+</script>
 <style scoped lang="scss"></style>
