@@ -1,8 +1,24 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* font-size: 14px; */
+}
+html, body, #app {
+  height: 100%;
+  width: 100%;
 }
 .fb {
   display: flex;
   justify-content: space-between;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: table;
+  clear: both;
 }
