@@ -13,7 +13,7 @@
       <recursion-menu :routes="item.children" />
     </el-sub-menu>
     <el-menu-item
-      v-else
+      v-else-if="!item.meta.hidden"
       :index="item.path"
       @click="toTargetPage(item.path)"
     >
