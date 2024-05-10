@@ -1,5 +1,4 @@
 <template>
-  <!-- <div @click="toHomePage">前往主页</div> -->
   <div class="login">
     <div class="loginBox">
       <div class="loginRegisterTitle">
@@ -71,7 +70,7 @@
   // const
 </script>
 <style scoped lang="scss">
-  * {
+  .login * {
     color: #fff;
   }
   .login {
@@ -165,7 +164,6 @@
     background-color: transparent;
     .el-checkbox__inner {
       background-color: transparent;
-      /* border: 1px solid rgb(187,195,206); */
       border-radius: 50%;
     }
   }
