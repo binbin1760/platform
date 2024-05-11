@@ -1,6 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { createRouterGuards } from './guards'
 
+const modules = import.meta.glob('./modules/**/*.js', {
+  eager: true
+})
+
+const ModuleList = Object.keys(modules)
+export const routesModuleList = ModuleList.reduce((list, key) => {
+  const mod = modules[key].default ?? {}
+  const modList = Array.isArray(mod) ? [...mod] : [mod]
+  return [...list, ...modList]
+}, [])
+
+function RoutesSort(a, b) {
+  return (a.meta?.sort ?? 0) - (b.meta?.sort ?? 0)
+}
+
+export const asyncRoutes = routesModuleList.sort(RoutesSort)
+
 const constantRoute = [
   {
     path: '/login',

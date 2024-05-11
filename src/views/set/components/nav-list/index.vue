@@ -19,19 +19,19 @@
   const navlist = ref([
     {
       nav: '企业信息',
-      path: '/platform/setting/company'
+      path: '/setting/company'
     },
     {
       nav: '权限管理',
-      path: '/platform/setting/permission'
+      path: '/setting/permission'
     },
     {
       nav: '功能设置',
-      path: '/platform/setting/function'
+      path: '/setting/function'
     },
     {
       nav: '管理设置',
-      path: '/platform/setting/admin'
+      path: '/setting/admin'
     }
   ])
   function getSelectedItem(item) {

@@ -5,7 +5,7 @@ export function createRouterGuards(Router) {
     const list = asyncRoute().asyncRoutes
     list.forEach((item) => Router.addRoute(toRaw(item)))
     if (to.matched.length === 0) {
-      next({...to,replace:true})
+      next({ ...to, replace: true })
     } else {
       next()
     }
