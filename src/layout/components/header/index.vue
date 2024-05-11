@@ -50,7 +50,7 @@
         color: ''
       },
       select: () => {
-        router.push('/platform/home')
+        router.push('/home/dashbord')
       }
     },
     {
@@ -103,7 +103,7 @@
         color: '#F29C5F'
       },
       select: () => {
-        router.push('/platform/setting')
+        router.push('/setting/company')
       }
     },
     {

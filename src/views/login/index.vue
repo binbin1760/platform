@@ -13,43 +13,50 @@
         </div>
         <div class="bottomBox">
           <el-form
-          :model="ruleForm"
-          :rules="rules"
-        >
-          <el-form-item
-            label=""
-            prop="account"
+            :model="ruleForm"
+            :rules="rules"
           >
-            <el-input
-              v-model="ruleForm.account"
-              style="width: 100%"
-              :prefix-icon="User"
-              autocomplete="off"
-              placeholder="手机号"
-            />
-          </el-form-item>
-          <el-form-item
-            label=""
-            prop="pass"
+            <el-form-item
+              label=""
+              prop="account"
+            >
+              <el-input
+                v-model="ruleForm.account"
+                style="width: 100%"
+                :prefix-icon="User"
+                autocomplete="off"
+                placeholder="手机号"
+              />
+            </el-form-item>
+            <el-form-item
+              label=""
+              prop="pass"
+            >
+              <el-input
+                v-model="ruleForm.pass"
+                type="password"
+                style="width: 100%"
+                :prefix-icon="Lock"
+                autocomplete="off"
+                placeholder="密码（8-16位，区分大小写）"
+              />
+            </el-form-item>
+          </el-form>
+          <div class="othersBox">
+            <el-checkbox
+              v-model="autoLogin"
+              size="small"
+            >
+              下次自动登录
+            </el-checkbox>
+            <div class="forget">忘记密码?</div>
+          </div>
+          <el-button
+            id="loginBtn"
+            @click="toHomePage"
           >
-            <el-input
-              v-model="ruleForm.pass"
-              type="password"
-              style="width: 100%"
-              :prefix-icon="Lock"
-              autocomplete="off"
-              placeholder="密码（8-16位，区分大小写）"
-            />
-          </el-form-item>
-        </el-form>
-        <div class="othersBox">
-          <el-checkbox
-            v-model="autoLogin"
-            size="small"
-          >下次自动登录</el-checkbox>
-          <div class="forget">忘记密码?</div>
-        </div>
-        <el-button id="loginBtn" @click="toHomePage">立即登录</el-button>
+            立即登录
+          </el-button>
         </div>
       </div>
     </div>
@@ -59,14 +66,14 @@
 <script setup>
   import { useRouter } from 'vue-router'
   import { ElForm, ElCheckbox, ElButton } from 'element-plus'
-  import {User, Lock} from '@element-plus/icons-vue'
+  import { User, Lock } from '@element-plus/icons-vue'
   const router = useRouter()
   function toHomePage() {
-    router.push('/platform/home')
+    router.push('/home/dashbord')
   }
-  const ruleForm = ref({}); // 表单数据
-  const rules = ref({}); // 校验
-  const autoLogin = ref(null); // 下次自动登录
+  const ruleForm = ref({}) // 表单数据
+  const rules = ref({}) // 校验
+  const autoLogin = ref(null) // 下次自动登录
   // const
 </script>
 <style scoped lang="scss">
@@ -130,8 +137,8 @@
     }
     .el-input__wrapper {
       background-color: transparent;
-      box-shadow: 0 0 0 0 var(--el-input-border-color,var(--el-border-color)) inset;
-      border-bottom: 1px solid #7A92AC;
+      box-shadow: 0 0 0 0 var(--el-input-border-color, var(--el-border-color)) inset;
+      border-bottom: 1px solid #7a92ac;
       border-radius: 0;
     }
     input {
@@ -147,7 +154,7 @@
     }
   }
   :deep(.el-button) {
-    background-color: rgb(237,128,28);
+    background-color: rgb(237, 128, 28);
     width: 100%;
     height: 36px;
     line-height: 36px;
@@ -168,6 +175,6 @@
     }
   }
   .forget {
-    color: #A4AEBF;
+    color: #a4aebf;
   }
 </style>
