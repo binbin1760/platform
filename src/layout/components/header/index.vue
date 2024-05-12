@@ -12,6 +12,8 @@
         v-for="(item, index) in iconListItem"
         :popper-style="{ minWidth: '36px !important' }"
         :key="index"
+        :show-arrow="false"
+        :offset="0"
         :width="item.width"
       >
         <template #reference>
