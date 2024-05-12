@@ -1,5 +1,5 @@
 <template>
-  <div class="performance"></div>
+  <div class="performance">绩效管理</div>
 </template>
 
 <script setup></script>

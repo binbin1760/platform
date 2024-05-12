@@ -35,7 +35,7 @@ const routes = [
           name: '功能管理',
           hidden: true
         },
-        component: import('@/views/set/views/set-function/index.vue')
+        component: () => import('@/views/set/views/set-function/index.vue')
       },
       {
         path: '/setting/admin',
@@ -44,7 +44,7 @@ const routes = [
           name: '管理设置',
           hidden: true
         },
-        component: import('@/views/set/views/set-adminaiton/index.vue')
+        component: () => import('@/views/set/views/set-adminaiton/index.vue')
       }
     ]
   }

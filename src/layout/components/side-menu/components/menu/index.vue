@@ -7,16 +7,12 @@
       :index="item.path"
       v-if="item.children && !item.meta.hidden"
     >
-      <!-- <span
-        class="iconfont sideicon"
-        :class="item.meta.icon"
-      ></span> -->
       <template #title>
-        <span
+        <i
           class="iconfont sideicon"
           :class="item.meta.icon"
-        ></span>
-        {{ item.meta.name }}
+        ></i>
+        <span>{{ item.meta.name }}</span>
       </template>
       <recursion-menu :routes="item.children" />
     </el-sub-menu>

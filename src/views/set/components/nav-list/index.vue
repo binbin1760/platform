@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-list">
+  <div class="nav">
     <div
       :class="seletctedPath === item.path ? ' actived' : 'active'"
       v-for="(item, index) in navlist"
@@ -39,16 +39,10 @@
   }
 </script>
 <style scoped lang="scss">
-  .nav-list {
+  .nav {
     display: flex;
     align-items: baseline;
     gap: 36px;
-    padding: 0 22px;
-    padding-top: 20px;
-    padding-bottom: 16px;
-    background-color: white;
-    color: #333333;
-    font-size: 12px;
   }
   .active {
     cursor: pointer;
