@@ -49,7 +49,7 @@
             >
               下次自动登录
             </el-checkbox>
-            <div class="forget">忘记密码?</div>
+            <div class="forget fs14">忘记密码?</div>
           </div>
           <el-button
             id="loginBtn"
@@ -130,6 +130,7 @@
     display: flex;
     font-size: 14px;
     margin-bottom: 18px;
+    margin-bottom: 24px;
   }
   :deep(.el-form) {
     .el-form-item__content {
@@ -167,12 +168,12 @@
       color: #fff;
     }
   }
-  :deep(.el-checkbox__input) {
+  :deep(.el-checkbox__input .el-checkbox__inner) {
     background-color: transparent;
-    .el-checkbox__inner {
-      background-color: transparent;
-      border-radius: 50%;
-    }
+    border-radius: 50%;
+  }
+  :deep(.is-checked .el-checkbox__input .el-checkbox__inner) {
+    background-color: var(--el-checkbox-checked-bg-color);
   }
   .forget {
     color: #a4aebf;

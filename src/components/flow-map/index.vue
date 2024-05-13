@@ -14,7 +14,7 @@
   const nodes = defineModel('nodes', { type: Object, required: true })
   const flowmap = ref(null)
 
-  const emit = defineEmits(['selectNode'])
+  const emit = defineEmits(['selectNode', 'selectEdge'])
   // 注册流程图
   function initaFlowMap() {
     LogicFlow.use(DndPanel)
@@ -42,6 +42,9 @@
 
     lf.on('node:click', (data) => {
       emit('selectNode', data)
+    })
+    lf.on('edge:click', (data) => {
+      emit('selectEdge', data)
     })
   }
   onMounted(() => {
