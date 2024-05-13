@@ -16,6 +16,8 @@
 <style scoped lang="scss">
   .layout {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   .header {
     padding: 0 30px 0 20px;
@@ -23,11 +25,13 @@
     line-height: 53px;
   }
   .contain {
+    flex: 1;
     display: flex;
   }
   .main {
     padding: 12px 0 0 12px;
     background: #f2f2f2;
+    height: 100%;
   }
   .el-main {
     --el-main-padding: 12px;
