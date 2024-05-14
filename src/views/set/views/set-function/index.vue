@@ -65,7 +65,9 @@
                     <div class="popover-item">绩效考核模板</div>
                   </template>
                   <div class="popover-list">
-                    <div class="popover-item text-left">绩效考核模板/项目绩效考核模板设置</div>
+                    <div class="popover-item text-left">
+                      绩效考核模板/项目绩效考核模板设置
+                    </div>
                     <div class="popover-item text-left">360考评模板设置</div>
                     <div class="popover-item text-left">模板列内容规则</div>
                   </div>

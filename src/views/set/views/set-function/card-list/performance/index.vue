@@ -1,7 +1,12 @@
 <template>
   <div class="performance">
     <div class="flex gap8">
-      <div class="top-item">创建绩效模板</div>
+      <div
+        class="top-item"
+        @click="toCreateTemplatePage"
+      >
+        创建绩效模板
+      </div>
       <div class="top-item">绩效沟通模板</div>
     </div>
     <div class="performance-template-list">
@@ -22,6 +27,7 @@
 
 <script setup>
   import { DataTable, Pageiniation } from '@/components'
+  const router = useRouter()
   const column = [
     {
       type: 'index',
@@ -127,6 +133,10 @@
   function pageSizeChange(value) {
     pages.value.pageSize = value
     console.log(pages.value)
+  }
+
+  function toCreateTemplatePage() {
+    router.push('/setting/function/create/template')
   }
 </script>
 <style scoped lang="scss">
