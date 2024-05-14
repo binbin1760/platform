@@ -45,19 +45,21 @@ const routes = [
           hidden: true
         },
         component: () => import('@/views/set/views/set-adminaiton/index.vue')
+      },
+      {
+        path: '/setting/function/create/template',
+        name: 'create-template',
+        meta: {
+          name: '创建模板',
+          hidden: true
+        },
+        component: () =>
+          import(
+            '@/views/set/views/set-function/card-list/create-template/index.vue'
+          )
       }
     ]
   }
 ]
 
 export default routes
-
-//   {
-//     path: '/platform/setting/admin',
-//     name: 'setadmin',
-//     meta: {
-//       name: '管理设置',
-//       hidden: true
-//     },
-//     component: SetAdimination
-//   }
